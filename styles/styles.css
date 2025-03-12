@@ -91,10 +91,12 @@ body {
     src: url("../assets/fonts/ManuScriptProtoType.ttf");
 }
 
-body {
-    background: linear-gradient(180deg, #191a21 0%, #181920 100%);
+html, body {
     overflow-x: hidden;
     overflow-y: hidden;
+}
+body {
+    background: linear-gradient(180deg, #191a21 0%, #181920 100%);
 }
 
 .noise-texture {
