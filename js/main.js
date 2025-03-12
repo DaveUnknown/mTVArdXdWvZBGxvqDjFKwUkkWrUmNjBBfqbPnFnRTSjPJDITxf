@@ -42,8 +42,20 @@ const centerX = window.innerWidth / 2;
 const centerY = window.innerHeight / 2;
 
 document.addEventListener("mousemove", (event) => {
-    const { clientX, clientY } = event;
+    handleMove(event.clientX, event.clientY);
+});
 
+document.addEventListener("touchmove", (event) => {
+    // Prevent default behavior to avoid scroll issues
+    event.preventDefault();
+    
+    // Get the first touch point
+    const touch = event.touches[0];
+    handleMove(touch.clientX, touch.clientY);
+}, { passive: false });
+
+function handleMove(clientX, clientY) {
+    console.log(clientX, clientY)
     // Calculate offsets based on distance from center
     const offsetX = (clientX - centerX) * 0.08; // 10% movement
     const offsetY = (clientY - centerY) * 0.08;
@@ -108,4 +120,4 @@ document.addEventListener("mousemove", (event) => {
      }, 200)
         
     }
-});
+};
