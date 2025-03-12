@@ -92,9 +92,13 @@ body {
 }
 
 html, body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
+    height: 100%;
+    touch-action: none;
+    -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;      /* Hide scrollbar in Firefox */
 }
+
 body {
     background: linear-gradient(180deg, #191a21 0%, #181920 100%);
 }
